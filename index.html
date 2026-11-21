@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ұлттық мәдениеттің «ДНҚ-сы»</title>
+<meta name="description" content="Ғылыми жоба: қазақ жастары үшін қазақты қазақ ететін не? Теория, үш деңгейлі модель, сауалнама.">
+<meta property="og:title" content="Ұлттық мәдениеттің «ДНҚ-сы»">
+<meta property="og:description" content="Ғылыми жоба: қазақ жастары үшін қазақты қазақ ететін не?">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3e8; --paper:#fffdf6; --ink:#1d2a22; --muted:#5d6b61;
+  --green:#14532d; --green2:#1f7a45; --gold:#b8862b; --gold2:#e5c46b; --line:#e4dcc4;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1712; --paper:#16211a; --ink:#ece6d3; --muted:#a3ad9f;
+    --green:#5fbf84; --green2:#3f9e66; --gold:#e0b354; --gold2:#8a6a24; --line:#2a3a30;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1712; --paper:#16211a; --ink:#ece6d3; --muted:#a3ad9f;
+  --green:#5fbf84; --green2:#3f9e66; --gold:#e0b354; --gold2:#8a6a24; --line:#2a3a30;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:"PT Serif",Georgia,serif;line-height:1.25;margin:0 0 .5em}
+a{color:var(--green2)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+.orn{height:18px;background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='18' viewBox='0 0 36 18'%3E%3Cpath d='M0 18 C6 18 6 6 12 6 C16 6 16 12 13 12 C11 12 11 9 13 9 M36 18 C30 18 30 6 24 6 C20 6 20 12 23 12 C25 12 25 9 23 9 M12 6 Q18 0 24 6' fill='none' stroke='%23b8862b' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x center/36px 18px;opacity:.9}
+header.hero{background:linear-gradient(160deg,#0f3d22,#14532d 55%,#1f6b3e);color:#f6efd9;padding:56px 0 40px;text-align:center}
+.hero .kicker{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--gold2)}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);margin:.3em 0}
+.hero p.q{font-size:1.15rem;opacity:.95;margin:0 auto 1.2em;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-size:.9rem}
+.meta span{border:1px solid rgba(229,196,107,.5);border-radius:999px;padding:4px 12px}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:8px 16px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:600;font-size:.9rem;padding:6px 12px;border-radius:8px}
+nav a:hover{background:var(--line)}
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:1.8rem;color:var(--green)}
+section h2 small{display:block;font:600 .8rem Manrope,sans-serif;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:1.1rem;color:var(--green)}
+.card .ic{font-size:1.6rem}
+.hyp{border-left:4px solid var(--gold);background:var(--paper);padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0}
+ul.clean{padding-left:1.1em} ul.clean li{margin:.3em 0}
+/* model */
+.model{display:flex;flex-direction:column;align-items:center;gap:0;margin:24px 0}
+.ring{border-radius:999px;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;transition:transform .2s;border:2px solid var(--gold)}
+.ring:hover{transform:scale(1.02)}
+.r1{width:min(100%,560px);padding:22px 22px 0;background:color-mix(in srgb,var(--gold) 14%,var(--paper));flex-direction:column}
+.r2{width:86%;padding:20px 20px 0;margin-top:10px;background:color-mix(in srgb,var(--green2) 18%,var(--paper));flex-direction:column}
+.r3{width:70%;padding:26px 14px;margin:10px 0 18px;background:var(--green);color:#fff;font-weight:700}
+.ring b{display:block}
+.ring span{font-size:.85rem;opacity:.85}
+.r1>b,.r2>b{margin-bottom:2px}
+#modelInfo{min-height:64px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button{font:600 .9rem Manrope,sans-serif;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+.tabs button.on{background:var(--green);color:#fff;border-color:var(--green)}
+.tab{display:none}.tab.on{display:block}
+/* survey */
+.qbox{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.qbox .n{font-weight:800;color:var(--gold)}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.opts label{border:1px solid var(--line);border-radius:10px;padding:6px 12px;cursor:pointer;font-size:.92rem}
+.opts input{margin-right:6px;accent-color:var(--green2)}
+.qbox input[type=text],.qbox textarea{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-top:8px}
+.block-t{margin-top:28px;font:800 .85rem Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--green2)}
+.btn{font:700 1rem Manrope,sans-serif;background:var(--green);color:#fff;border:0;border-radius:10px;padding:12px 20px;cursor:pointer;margin:8px 8px 0 0}
+.btn.alt{background:transparent;color:var(--green);border:1px solid var(--green)}
+#result{display:none}
+.bar{display:grid;grid-template-columns:120px 1fr 44px;gap:8px;align-items:center;margin:6px 0;font-size:.92rem}
+.bar i{display:block;height:14px;border-radius:7px;background:var(--green2)}
+.bar.out i{background:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+ol.src li{margin:.4em 0;word-break:break-word}
+footer{padding:28px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
+.toggle{position:fixed;right:14px;bottom:14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;width:42px;height:42px;cursor:pointer;font-size:1.1rem}
+@media (max-width:560px){.r2{width:92%}.r3{width:80%}.bar{grid-template-columns:90px 1fr 40px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Ғылыми жоба · Әлеуметтік-гуманитарлық ғылымдар</div>
+    <h1>Ұлттық мәдениеттің «ДНҚ-сы»</h1>
+    <p class="q">Қазақ жастары үшін қазақты қазақ ететін не?</p>
+    <div class="meta">
+      <span>Орындаған: Талип Мөлдір, 9-сынып</span>
+      <span>Жетекшісі: Шайхина К.Т.</span>
+      <span>№152 мектеп-гимназия</span>
+      <span>2026</span>
+    </div>
+  </div>
+</header>
+<div class="orn"></div>
+<nav><div class="wrap">
+  <a href="#about">Жоба туралы</a><a href="#theory">Теория</a><a href="#codes">Мәдени код</a>
+  <a href="#model">Үш деңгейлі модель</a><a href="#method">Әдістеме</a><a href="#survey">Сауалнама</a>
+  <a href="#conclusion">Қорытынды</a><a href="#sources">Әдебиеттер</a>
+</div></nav>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2><small>Кіріспе</small>Жоба туралы</h2>
+  <p>Жаһандану, әлеуметтік желілер мен цифрлық орта кез келген ұлттың мәдени бірегейлігіне сын болып отыр. Қазіргі жасөспірімдер көп тілді, ғаламдық ақпараттық ортада өсуде. Осындай жағдайда «қазақ болу» ұғымы жаңа буын санасында қалай сақталып, қалай өзгеріп жатыр — бұл жобаның басты сұрағы.</p>
+  <p>Биологиялық ДНҚ ағзаның тұқым қуалайтын «өзегін» сақтайтыны сияқты, әр ұлттың да ұрпақтан ұрпаққа берілетін <b>мәдени өзегі</b> бар. Жоба осы өзекті анықтап, оның мектеп оқушыларының санасында қалай сақталғанын сауалнама арқылы тексереді.</p>
+  <div class="hyp"><b>Гипотеза.</b> Жаһандануға қарамастан, қазақ жасөспірімдері үшін ұлттық бірегейліктің «ядросын» сыртқы белгілер (ұлттық киім, рәсімдердің сыртқы формасы) емес, терең белгілер — <b>ана тілі, отбасылық-туыстық жады және адамгершілік құндылықтар</b> құрайды.</div>
+  <div class="grid">
+    <div class="card"><div class="ic">🎯</div><h3>Мақсаты</h3><p>Оқушылардың түсінігінде «қазақтықты» анықтайтын негізгі мәдени-құндылықтық белгілерді айқындап, жүйелеу.</p></div>
+    <div class="card"><div class="ic">🔍</div><h3>Нысаны</h3><p>Қазіргі қазақ жасөспірімдерінің ұлттық-мәдени сана-сезімі.</p></div>
+    <div class="card"><div class="ic">🧪</div><h3>Әдістері</h3><p>Әдебиет талдау, анонимді сауалнама, статистикалық өңдеу, салыстырмалы талдау (қала/ауыл, ұл/қыз).</p></div>
+    <div class="card"><div class="ic">🏫</div><h3>Практикалық маңызы</h3><p>Тәрбие сағаттары, «Өзін-өзі тану», тарих пен әдебиет факультативтері, ата-аналар жиналысы.</p></div>
+  </div>
+  <h3 style="margin-top:24px">Міндеттері</h3>
+  <ul class="clean">
+    <li>«Мәдени ДНҚ», «ұлттық сана-сезім», «этникалық сәйкестік» ұғымдарын теориялық талдау;</li>
+    <li>қазақ мәдениетінің негізгі құрамдас бөліктерін (тіл, шежіре, дәстүр, рухани құндылықтар) сипаттау;</li>
+    <li>жасөспірімдерге арналған сауалнама әдістемесін әзірлеу;</li>
+    <li>нәтижелерге сандық және сапалық талдау жасау;</li>
+    <li>қорытынды мен тәжірибелік ұсыныстар беру.</li>
+  </ul>
+</div></section>
+
+<section id="theory"><div class="wrap">
+  <h2><small>1-тарау</small>«Мәдени ДНҚ» ұғымы</h2>
+  <p>«Мәдени ДНҚ» — қатаң ғылыми термин емес, метафора. Мәдениеттану мен әлеуметтануда оған жақын «мәдени код», «ұлттық код», «ұлттың тарихи жады» ұғымдары қолданылады: халықтың тарихи даму барысында қалыптасқан, тұрақты сақталатын және оны басқа халықтардан ерекшелендіретін құндылықтар, таным тәсілдері мен мінез-құлық үлгілері.</p>
+  <p>Қазақстанда бұл тақырып 2017 жылғы «Болашаққа бағдар: рухани жаңғыру» мақаласынан кейін кең талқыланды [1]. Е.Қарин мемлекетшілдіктің негізгі алғышарты — ұлттық сана-сезім деп тұжырымдайды [3]. ҚазҰУ ғалымдары (М.Зейнеш т.б.) ана тілді ұлттық өзін-өзі танудың басты құралы, ал халықтық педагогиканы мәдени мұраны ұрпаққа берудің маңызды тетігі деп көрсетеді [2].</p>
+  <div class="grid">
+    <div class="card"><h3>Сыртқы, көрінеу қабат</h3><p>Ұлттық киім, тағам, әуен, мереке рәсімдері — байқауға оңай белгілер.</p></div>
+    <div class="card"><h3>Терең, «жасырын» қабат</h3><p>Тіл, құндылықтар жүйесі, ойлау тәсілі, отбасылық-туыстық қатынас — көзге бірден түспейтін, бірақ тұрақтырақ белгілер.</p></div>
+  </div>
+</div></section>
+
+<section id="codes"><div class="wrap">
+  <h2><small>2-тарау</small>Қазақ мәдениетінің «код» элементтері</h2>
+  <div class="tabs" id="codeTabs">
+    <button class="on" data-t="c1">🗣️ Тіл</button>
+    <button data-t="c2">🌳 Шежіре, жеті ата</button>
+    <button data-t="c3">🏕️ Дала мәдениеті</button>
+    <button data-t="c4">🤲 Рухани құндылықтар</button>
+  </div>
+  <div class="tab on" id="c1"><div class="card">
+    <p>Қазақ тілі — мемлекеттік тіл, халықтың дүниетанымы мен тарихи тәжірибесін сақтаған «рухани қазына» [7]. Тілге немқұрайлылық — ұлттық намысқа қатысты мәселе [6].</p>
+    <p>Тілді үш деңгейде қарастыруға болады: <b>1)</b> білу деңгейі; <b>2)</b> күнделікті қолдану жиілігі; <b>3)</b> тілді «өзімдікі» деп сезіну. Үшінші деңгей — «мәдени ДНҚ-ның» терең қабаты.</p>
+  </div></div>
+  <div class="tab" id="c2"><div class="card">
+    <p>«Жеті ата» дәстүрі — әр адамның шежіресін жеті атаға дейін білуі. Бұл туыстықты сақтау мен ұрпақтар сабақтастығының тетігі [8; 9]. Халық санасында «жеті атасын білмеген — жетесіз» деген түсінік болған.</p>
+    <p>Бүгін шежіре практикалық қызметінен гөрі символдық, тәрбиелік мәнге ие: ұрпақты өз түбірімен байланыстырады.</p>
+  </div></div>
+  <div class="tab" id="c3"><div class="card">
+    <p>Көшпелі өркениеттен келген құндылықтар: кеңістік (дала), қонақжайлылық, асар мен жылу сияқты ұжымдық көмек. Наурыз, дастархан дәстүрі, қыз ұзату, келін түсіру — ауызша әрі тәжірибе арқылы берілетін «тірі мәдениет».</p>
+    <p>Урбанизация мен отбасылардың кішіреюі бұл тәжірибені әлсіретуде, сондықтан қай элементтер әлі «маңызды», қайсысы тек мерекелік символға айналғанын анықтау қажет.</p>
+  </div></div>
+  <div class="tab" id="c4"><div class="card">
+    <p>Үлкенге құрмет, қонақжайлылық, имандылық, ар-намыс, елге және жерге сүйіспеншілік. Мәдени саясат тұжырымдамасында рухани-адамгершілік негіздерді нығайту мемлекеттік деңгейде көрсетілген [5].</p>
+    <p>Бұл құндылықтар ертегі, мақал-мәтел, аталы сөз арқылы қалыптасады, ал жастар оларды жалпыадамзаттық этика тұрғысынан да қабылдайды.</p>
+  </div></div>
+</div></section>
+
+<section id="model"><div class="wrap">
+  <h2><small>Жоба моделі</small>Үш деңгейлі «мәдени ДНҚ» моделі</h2>
+  <p>Шеңберлерді басып, әр деңгейдің мазмұнын көріңіз.</p>
+  <div class="model">
+    <div class="ring r1" data-k="out"><b>Сыртқы деңгей</b><span>киім · тағам · мереке рәсімдері</span>
+      <div class="ring r2" data-k="mid"><b>Аралық деңгей</b><span>дәстүр · отбасылық салт · ұлттық мерекелер</span>
+        <div class="ring r3" data-k="core">ЯДРО<br>тіл · шежіре · құндылықтар</div>
+      </div>
+    </div>
+  </div>
+  <div class="card" id="modelInfo"><b>Ядро</b> — ана тілі, отбасылық-туыстық жады және адамгершілік құндылықтар. Гипотеза бойынша ең тұрақты деңгей.</div>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <h2><small>3-тарау</small>Зерттеу әдістемесі</h2>
+  <div class="grid">
+    <div class="card"><h3>1-кезең · Дайындық</h3><p>Дереккөздерді жинау және талдау, мақсат пен міндетті нақтылау, сауалнама сұрақтарын әзірлеу.</p></div>
+    <div class="card"><h3>2-кезең · Эмпирикалық</h3><p>5–10 оқушымен пилоттық сынақ, сұрақтарды түзету, негізгі сауалнама (2026 ж. сәуір–мамыр, 120 оқушы).</p></div>
+    <div class="card"><h3>3-кезең · Қорытынды</h3><p>Деректерді өңдеу, кесте мен диаграмма құру, нәтижелерді талдау, қорытынды жасау.</p></div>
+  </div>
+  <p style="margin-top:16px">Сауалнама ерікті және анонимді түрде өтті. Ол 4 блоктан, барлығы 18 сұрақтан тұрады: жалпы мәліметтер, өзін-өзі сәйкестендіру, тіл–дәстүр–отбасы, құндылықтар мен көзқарас. Нәтижелер қала мен ауыл, ұл мен қыз топтары бойынша салыстырылды.</p>
+</div></section>
+
+<section id="survey"><div class="wrap">
+  <h2><small>Интерактив</small>Сауалнамадан өтіп көріңіз</h2>
+  <p>Жобадағы сауалнаманың негізгі сұрақтары. Жауаптар еш жерге жіберілмейді, тек өз экраныңызда «мәдени ДНҚ» профиліңіз шығады.</p>
+  <form id="sv" onsubmit="return false"></form>
+  <button class="btn" id="go">Нәтижені көру</button>
+  <button class="btn alt" id="reset">Қайта бастау</button>
+  <div id="result" class="card" style="margin-top:18px">
+    <h3>Сіздің «мәдени ДНҚ» профиліңіз</h3>
+    <div id="bars"></div>
+    <p id="verdict"></p>
+  </div>
+</div></section>
+
+<section id="conclusion"><div class="wrap">
+  <h2><small>Қорытынды</small>Негізгі тұжырымдар</h2>
+  <ul class="clean">
+    <li>«Ұлттық мәдениеттің ДНҚ-сы» ұғымын шартты түрде сыртқы және терең қабаттарға бөлуге болады; зерттеушілер терең қабатқа — тіл мен отбасылық тәрбиеге — ерекше мән береді [2].</li>
+    <li>Сауалнама 120 оқушы арасында жүргізіліп, нәтижелері кестелер мен диаграммалар түрінде талданды; ауыл мен қала оқушыларының жауаптары салыстырылды.</li>
+    <li>Нәтижелер негізінде «ядро — аралық деңгей — сыртқы деңгей» түріндегі үш деңгейлі модель ұсынылды.</li>
+    <li>Зерттеуді басқа өңірлер мен шетелдегі қазақ диаспорасы арасында салыстырмалы түрде жалғастыру — болашақ бағыт.</li>
+  </ul>
+  <div class="hyp"><b>Қолдану.</b> Нәтижелерді патриоттық тәрбие сағаттарында, «Өзін-өзі тану» факультативінде және ұлттық құндылықтарды насихаттайтын жобаларда пайдалануға болады.</div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <h2><small>Дереккөздер</small>Пайдаланылған әдебиеттер</h2>
+  <ol class="src">
+    <li>Назарбаев Н.Ә. Болашаққа бағдар: рухани жаңғыру // Egemen Qazaqstan. — 2017. — 12 сәуір. — <a href="https://egemen.kz" target="_blank" rel="noopener">egemen.kz</a></li>
+    <li>Zeinesh M., Aimbetova U., Dosmagambetova J., Khalykov K. Formation of national consciousness among young people // Journal of Philosophy, Culture and Political Science. — ҚазҰУ, 2024. — Т. 88, №2. — 40–48 б.</li>
+    <li>Қарин Е. Мемлекетшілдіктің негізгі алғышарты – ұлттық сана-сезім // <a href="https://egemen.kz/article/178166-erlan-qarin-memleketshildiktinh-negizgi-alghysharty-ulttyq-sana-sezim" target="_blank" rel="noopener">Egemen Qazaqstan</a></li>
+    <li>Ұлттық сана Қазақ елін Мәңгілік Ел етеді // <a href="https://abai.kz/post/47958" target="_blank" rel="noopener">Abai.kz</a></li>
+    <li>ҚР мәдени саясатының тұжырымдамасы: ҚР Президентінің 2014 ж. 4 қарашадағы №939 Жарлығы // <a href="https://adilet.zan.kz/kaz/docs/U1400000939" target="_blank" rel="noopener">Әділет</a></li>
+    <li>Тіл – ұлттық намыс // <a href="https://anatili.kazgazeta.kz/news/50157" target="_blank" rel="noopener">Ана тілі</a></li>
+    <li>Қазақ тілі — ұлтымыздың жаны // <a href="https://bilim-all.kz/article/3522" target="_blank" rel="noopener">Bilim-all.kz</a></li>
+    <li>Жеті ата // <a href="https://kk.wikipedia.org/wiki/Жеті_ата" target="_blank" rel="noopener">Уикипедия</a></li>
+    <li>Қазақтың жеті ата және жеті ұрпақ танымы // <a href="https://abai.kz/post/158890" target="_blank" rel="noopener">Abai.kz</a></li>
+    <li>Рухани жаңғыру // <a href="https://kk.wikipedia.org/wiki/Рухани_жаңғыру" target="_blank" rel="noopener">Уикипедия</a></li>
+    <li>Қазақстандықтар өмір сапасын оң бағалайды – сауалнама нәтижелері // <a href="https://kisi.kz/kazakstandyktar-omir-sapasyn-on-bagalajdy-saualnama-natizheleri/" target="_blank" rel="noopener">ҚСЗИ</a>, 2026</li>
+  </ol>
+</div></section>
+</main>
+<div class="orn"></div>
+<footer>«Ұлттық мәдениеттің «ДНҚ-сы»» ғылыми жобасы · Талип Мөлдір · №152 мектеп-гимназия · 2026</footer>
+<button class="toggle" id="theme" aria-label="Түсті ауыстыру">◐</button>
+
+<script>
+// tabs
+document.querySelectorAll('#codeTabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#codeTabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('#codes .tab').forEach(t=>t.classList.toggle('on',t.id===b.dataset.t));
+});
+// model
+const info={
+  core:'<b>Ядро</b> — ана тілі, отбасылық-туыстық жады (шежіре, жеті ата) және адамгершілік құндылықтар (ар-намыс, үлкенге құрмет). Гипотеза бойынша ең тұрақты деңгей.',
+  mid:'<b>Аралық деңгей</b> — отбасылық дәстүрлер, салт-жоралғылар, Наурыз бен Тәуелсіздік күні сияқты мерекелерді отбасымен атап өту.',
+  out:'<b>Сыртқы деңгей</b> — ұлттық киім, тағам, рәсімдердің сыртқы формасы. Көзге оңай түседі, бірақ көбіне тек мерекеде көрінеді.'
+};
+document.querySelectorAll('.ring').forEach(r=>r.addEventListener('click',e=>{e.stopPropagation();document.getElementById('modelInfo').innerHTML=info[r.dataset.k];}));
+// survey
+const Q=[
+ {b:'I. Жалпы мәліметтер'},
+ {id:'q3',t:'Тұратын жеріңіз',o:['қала','ауыл']},
+ {id:'q4',t:'Үйде негізінен қай тілде сөйлесесіздер?',o:['қазақша','орысша','екеуі бірдей','басқа'],s:{core:[2,0,1,0]}},
+ {b:'II. Өзін-өзі сәйкестендіру'},
+ {id:'q6',t:'«Мен қазақпын» деген сезім сіз үшін қаншалықты маңызды? (1 — маңызды емес, 5 — өте маңызды)',o:['1','2','3','4','5'],s:{core:[0,0,1,2,3]}},
+ {id:'q7',t:'Сізді «қазақ» ететін не? (бірнешеуін таңдауға болады)',o:['қазақ тілін білу','қазақ отбасында өсу','дәстүрлерді сақтау','ұлты құжатта жазылуы','Қазақстанда тұру'],m:1,s:{core:[2,2,0,0,0],mid:[0,0,2,0,0],out:[0,0,0,1,1]}},
+ {b:'III. Тіл, дәстүр, отбасы'},
+ {id:'q8',t:'Қазақ тілінде еркін сөйлей аласыз ба?',o:['иә','жартылай','жоқ'],s:{core:[3,1,0]}},
+ {id:'q10',t:'Шежіреңізді неше атаға дейін білесіз?',o:['0','1–3','4–6','7 және одан көп'],s:{core:[0,1,2,3]}},
+ {id:'q11',t:'Отбасылық дәстүрлерге қаншалықты мән бересіз? (1–5)',o:['1','2','3','4','5'],s:{mid:[0,0,1,2,3]}},
+ {id:'q12',t:'Үйде дәстүрлі қазақ тағамдары жиі дайындала ма?',o:['иә, жиі','кейде','сирек'],s:{out:[3,1,0]}},
+ {b:'IV. Құндылықтар мен көзқарас'},
+ {id:'q13',t:'Сіз үшін ең маңызды үш құндылық (үшеуін таңдаңыз)',o:['тіл','дін','отбасы','дәстүр','ар-намыс','елге сүйіспеншілік','білім','достық','еркіндік'],m:3,s:{core:[2,1,2,0,2,2,0,0,0],mid:[0,0,0,2,0,0,0,0,0]}},
+ {id:'q14',t:'Ұлттық киімді қашан киесіз?',o:['жиі','мерекеде','ешқашан'],s:{out:[3,2,0]}},
+ {id:'q15',t:'Ұлттық мерекелерді тойлайсыз ба?',o:['иә, отбасымен','иә, мектеппен','жоқ'],s:{mid:[3,1,0],out:[1,1,0]}},
+ {id:'q16',t:'Болашақта балаңызға қазақ тілі мен дәстүрін үйрету маңызды ма?',o:['иә','жоқ','ойланбадым'],s:{core:[2,0,0],mid:[1,0,0]}},
+ {id:'q17',t:'Жаһандану қазақ дәстүрлеріне қауіп төндіреді ме?',o:['иә','жоқ','білмеймін']},
+ {id:'q18',t:'Сіздің ойыңызша, «қазақты қазақ ететін» ең басты нәрсе не?',txt:1}
+];
+const form=document.getElementById('sv');let n=0;
+Q.forEach(q=>{
+  if(q.b){form.insertAdjacentHTML('beforeend',`<div class="block-t">${q.b}</div>`);return;}
+  n++;let h=`<div class="qbox"><span class="n">${n}.</span> ${q.t}`;
+  if(q.txt)h+=`<textarea name="${q.id}" rows="2" placeholder="Өз пікіріңіз..."></textarea>`;
+  else{h+='<div class="opts">'+q.o.map((o,i)=>`<label><input type="${q.m?'checkbox':'radio'}" name="${q.id}" value="${i}">${o}</label>`).join('')+'</div>';}
+  form.insertAdjacentHTML('beforeend',h+'</div>');
+});
+form.addEventListener('change',e=>{
+  const q=Q.find(x=>x.id===e.target.name);
+  if(q&&q.m>1){const c=form.querySelectorAll(`input[name=${q.id}]:checked`);if(c.length>q.m)e.target.checked=false;}
+});
+const MAX={core:0,mid:0,out:0};
+Q.forEach(q=>{if(!q.s)return;for(const k in q.s){const a=q.s[k];MAX[k]+=q.m?[...a].sort((x,y)=>y-x).slice(0,q.m).reduce((s,v)=>s+v,0):Math.max(...a);}});
+document.getElementById('go').onclick=()=>{
+  const sc={core:0,mid:0,out:0};
+  Q.forEach(q=>{if(!q.s)return;form.querySelectorAll(`input[name=${q.id}]:checked`).forEach(i=>{for(const k in q.s)sc[k]+=q.s[k][+i.value]||0;});});
+  const p=k=>Math.round(100*sc[k]/MAX[k]);
+  const rows=[['Ядро','core',''],['Аралық деңгей','mid',''],['Сыртқы деңгей','out','out']];
+  document.getElementById('bars').innerHTML=rows.map(r=>`<div class="bar ${r[2]}"><span>${r[0]}</span><i style="width:${Math.max(p(r[1]),2)}%"></i><b>${p(r[1])}%</b></div>`).join('');
+  const c=p('core'),o=p('out');
+  document.getElementById('verdict').textContent= c>=o
+    ? 'Сіздің жауаптарыңызда терең қабат (тіл, шежіре, құндылықтар) сыртқы белгілерден басым — бұл жоба гипотезасына сай келеді.'
+    : 'Сіздің жауаптарыңызда сыртқы белгілер (киім, тағам, рәсім) терең қабаттан басым шықты.';
+  const r=document.getElementById('result');r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'center'});
+};
+document.getElementById('reset').onclick=()=>{form.reset();document.getElementById('result').style.display='none';};
+// theme
+document.getElementById('theme').onclick=()=>{
+  const d=document.documentElement,cur=d.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  d.setAttribute('data-theme',cur==='dark'?'light':'dark');
+};
+</script>
+</body>
+</html>
